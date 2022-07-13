@@ -9,10 +9,7 @@
             </div>
             <div class="modal-sity__divider"></div>
             <ul class="modal-sity__sity-menu">
-                <li class="modal-sity__sity-item modal-sity__sity-item--active">Апрелевка</li>
-                <li class="modal-sity__sity-item">Балабанова</li>
-                <li class="modal-sity__sity-item">Малоярославец</li>
-                <li class="modal-sity__sity-item">Жуков</li>
+                <li v-for="city in stateCities" class="modal-sity__sity-item">{{ city.name }}</li>
             </ul>
         </div>
         <!-- /.modal -->
@@ -22,7 +19,23 @@
 <script>
 
 export default {
-    name: 'ModalSity',
+  name: 'ModalCity',
+  data: () => ({
+    classActive: 'modal-sity__sity-item--active'
+  }),
+  computed: {
+    stateCities() {
+      return this.$store.getters['cities/stateCities']
+    }
+  },
+  methods: {
+      async getCities() {
+        await this.$store.dispatch('cities/getCities')
+      }
+  },
+  mounted() {
+      this.getCities()
+  }
 }
 
 </script>

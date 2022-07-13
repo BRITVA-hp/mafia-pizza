@@ -2,7 +2,7 @@
   <header-app></header-app>
   <main-app></main-app>
   <footer-app></footer-app>
-  <modal-sity-app></modal-sity-app>
+  <modal-city-app></modal-city-app>
   <modal-empty-app></modal-empty-app>
   <modal-basket-app></modal-basket-app>
   <modal-order-app></modal-order-app>
@@ -10,8 +10,13 @@
 
 <script>
 
+import axios from "axios";
+
 export default {
-  name: 'App'
+  name: 'App',
+  created() {
+    console.log(process.env.VUE_APP_API_BASE_URL)
+  }
 }
 </script>
 
