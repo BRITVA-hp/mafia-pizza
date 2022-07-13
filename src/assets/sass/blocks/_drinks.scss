@@ -1,0 +1,98 @@
+.drinks {
+    position: relative;
+    padding: 120px 0;
+    background-color: #e5e5e5;
+    z-index: 1;
+
+    &__image-right {
+        position: absolute;
+        bottom: 200px;
+        right: 0;
+    }
+
+    &__image-one {
+        position: absolute;
+        left: 0;
+        top: 25%;
+    }
+
+    &__strawberry-image {
+        position: absolute;
+        right: 482px;
+        bottom: 152px;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 340px);
+        grid-template-rows: repeat(1, minmax(475px, auto));
+        grid-auto-rows: minmax(475px, auto);
+        column-gap: 20px;
+        row-gap: 30px;
+        justify-content: center;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 19px;
+        background-color: #fff;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        text-align: center;
+
+        &__one {
+            position: relative;
+        }
+
+        &__strawberry {
+            position: relative;
+        }
+
+    }
+
+    &-item__image {
+        margin-bottom: 20px;
+    }
+
+    &-item__descr {
+        max-width: 301px;
+        margin: 0 auto;
+        margin-bottom: 12px;
+    }
+
+    &__volume {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 82px;
+        height: 35px;
+        border: 1px solid $black-color-red;
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+
+    &__volume-text {
+        font-size: 16px;
+        line-height: 22px;
+        color: $black-color-red;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__price {
+        font-weight: 900;
+        font-size: 33px;
+        line-height: 30px;
+        color: $main-color;
+        margin-left: 20px;
+    }
+}
