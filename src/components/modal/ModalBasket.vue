@@ -1,10 +1,10 @@
 <template>
-    <div class="overlay">
+    <div class="overlay overlay-basket">
         <div class="modal-basket">
-            <div class="modal-basket__close" data-closesd>
+            <div class="modal-basket__close" data-closesd-basket>
                 <img src="../../assets/icons/modal/modal-closesd.svg" alt="modal-closesd">
             </div>
-            <button class="modal-registration__mobile-back" data-closesd>
+            <button class="modal-registration__mobile-back" data-closesd-basket>
                 Вернуться на главную
                 <img class="modal-registration__back-arrow" src="../../assets/icons/modal/mobile-back-arrow.svg"
                     alt="mobile-back-arrow">
@@ -62,7 +62,7 @@
                 <img src="../../assets/icons/modal/modal-basket-delete.svg" alt="modal-basket-delete" class="modal-basket__delete">
             </div>
             <div class="modal-basket__inner">
-                <button class="modal-basket__button">Перейти к оформлению заказа</button>
+                <button data-closesd-basket class="modal-basket__button">Перейти к оформлению заказа</button>
                 <div class="modal-basket__block">
                     <div class="modal-basket__block-text">Сумма заказа</div>
                     <div class="modal-basket__block-price">1109,00 ₽</div>

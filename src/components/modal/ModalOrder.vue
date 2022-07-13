@@ -1,10 +1,10 @@
 <template>
-    <div class="overlay">
+    <div class="overlay overlay-order">
         <div class="modal-registration">
-            <div class="modal-registration__close" data-closesd>
+            <div class="modal-registration__close" data-closesd-order>
                 <img src="../../assets/icons/modal/modal-closesd.svg" alt="modal-closesd">
             </div>
-            <button class="modal-registration__mobile-back" data-closesd>
+            <button class="modal-registration__mobile-back" data-closesd-order>
                 Вернуться на главную
                 <img class="modal-registration__back-arrow" src="../../assets/icons/modal/mobile-back-arrow.svg"
                     alt="mobile-back-arrow">
@@ -78,7 +78,7 @@
                             </div>
                             <textarea class="modal-registration__textarea"></textarea>
                             <div class="modal-registration__buttons">
-                                <button class="modal-registration__button-back">Назад в корзину</button>
+                                <button data-closesd-order data-modal-basket class="modal-registration__button-back">Назад в корзину</button>
                                 <button class="modal-registration__button-order">Оформить заказ на 1109 ₽</button>
                             </div>
                         </form>
@@ -140,7 +140,7 @@
                             </label>
                         </form>
                         <div class="modal-registration__buttons-mobile">
-                            <button class="modal-registration__back-mobile">Назад в корзину</button>
+                            <button data-closesd-order data-modal-basket class="modal-registration__back-mobile">Назад в корзину</button>
                             <button class="modal-registration__order-mobile">Оформить заказ на 1109 ₽</button>
                         </div>
                     </div>
@@ -199,7 +199,7 @@
                             </div>
                             <textarea class="modal-registration__textarea"></textarea>
                             <div class="modal-registration__buttons">
-                                <button class="modal-registration__button-back">Назад в корзину</button>
+                                <button data-closesd-order data-modal-basket class="modal-registration__button-back">Назад в корзину</button>
                                 <button class="modal-registration__button-order">Оформить заказ на 1109 ₽</button>
                             </div>
                         </form>
@@ -237,6 +237,10 @@
                                 Наличными
                             </label>
                         </form>
+                        <div class="modal-registration__buttons-mobile">
+                            <button data-closesd-order data-modal-basket class="modal-registration__back-mobile">Назад в корзину</button>
+                            <button class="modal-registration__order-mobile">Оформить заказ на 1109 ₽</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -16,7 +16,7 @@
                         <div class="header__operating-time">С 10:00 до 23:00</div>
                     </div>
                 </div>
-                <button class="header__button">Корзина<span class="header__button-price">0</span></button>
+                <button data-modal-basket class="header__button">Корзина<span class="header__button-price">0</span></button>
                 <div class="header__block">
                     <div class="header__mobile-inner">
                         <button data-city class="header__button-mobile">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <button class="mobile-button">
+        <button data-modal-basket class="mobile-button">
             <img src="../assets/icons/button-card/mobile-button.png" alt="mobile-button">
             <div class="mobile-button__count">
                 <span>3</span>

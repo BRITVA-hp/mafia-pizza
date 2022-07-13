@@ -59,30 +59,32 @@ export default () => {
 
 
     // Modal
-    function showModal(trigger, overlay, modal, close) {
-        const button = document.querySelector(trigger),
+    function showModal(triggers, overlay, modal, close) {
+        const triggers_ = document.querySelectorAll(triggers),
             overlayModal = document.querySelector(overlay),
-            modalEmpty = document.querySelector(modal),
+            modal_ = document.querySelector(modal),
             closeElem = document.querySelectorAll(close);
-
-        button.addEventListener('click', () => {
-            overlayModal.classList.add('active');
-            modalEmpty.classList.add('active');
-            document.body.style.overflow = 'hidden';
-
-        });
+        
+        triggers_.forEach(item => {
+            item.addEventListener('click', () => {
+                overlayModal.classList.add('active');
+                modal_.classList.add('active');
+                document.body.style.overflow = 'hidden';
+    
+            });
+        })
 
         closeElem.forEach(item => {
             item.addEventListener('click', () => {
                 overlayModal.classList.remove('active');
-                modalEmpty.classList.remove('active');
+                modal_.classList.remove('active');
                 document.body.style.overflow = '';
             });
         });
     }
 
-    showModal('.header__button', '.overlay', '.modal-basket', '[data-closesd]');
-    showModal('.mobile-button', '.overlay', '.modal-basket', '[data-closesd]');
+    showModal('[data-modal-basket]', '.overlay-basket', '.modal-basket', '[data-closesd-basket]');
+    showModal('.modal-basket__button', '.overlay-order', '.modal-registration', '[data-closesd-order]');
 
 
     // Slider

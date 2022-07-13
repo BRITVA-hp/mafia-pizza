@@ -1,5 +1,5 @@
 <template>
-    <div class="overlay-sity">
+    <div class="overlay-sity hide">
         <div class="modal-sity">
             <div class="modal-sity__close">
                 <img data-close src="../../assets/icons/modal/modal-close.svg" alt="modal-close">
